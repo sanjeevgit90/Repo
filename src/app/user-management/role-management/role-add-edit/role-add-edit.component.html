@@ -1,0 +1,41 @@
+<!-- <p>menu-add-edit works!</p> -->
+ 
+<app-header [isMenu]="true"></app-header> 
+ 
+<div class="card">
+    <div class="card-header">
+        <h6>Role Creation</h6>
+    </div> 
+    <!-- Header closed -->
+    
+
+    <form [formGroup]="formGroup">
+
+        
+    <div class="card-body">
+        <div  class = "input_form row"> 
+        <div class="col-md-3 mb-3">
+            <app-form-control [inputId]="'Role Name'" [lable]="'Role Name'| translate"
+                [placeholder]="placeholderValue + ' Name'"
+                [inputType]="'input'" [fieldType]="'text'" [isRequired]="true" [maxlength]="100">
+            </app-form-control>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <app-form-control [inputId]="'roleType'" [dropdownData]="roleTypeData" [lable]="'Role Type'"
+                [inputType]="'select'" [isRequired]="true" [dropdownIdKey]="'id'"  [dropdownNameKey]="'roleOption'"
+                [placeholder]="placeholderValue + 'Role Type'">
+            </app-form-control>
+        </div>
+    
+        </div>
+    </div>
+    <!-- Content closed -->
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <!-- Footer closed -->
+
+
+</form>

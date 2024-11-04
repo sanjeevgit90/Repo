@@ -1,0 +1,84 @@
+<!-- <div class="main-sidebar">
+
+
+  <div class="user-panel py-3 px-1 d-flex w-100">
+    <div class="image">
+      <i class="bx bxs-user img-circle elevation-2 bx-sm bg-white p-2" alt="User Image"></i>
+    </div>
+    <div class="info d-flex" style="pointer-events: none;">
+      <a class="d-block"><span>{{"GLOBAL_WELCOME" | translate}}</span><br /><strong>{{loggedUserName | translate}}</strong></a>
+    </div>
+    <div>
+    <div>
+    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav d-lg-none" (click)="toggleMenu()">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    </div>
+    </div>
+  </div>
+
+  <div class="sidebar" [class.sidebar-close]="!openSidebar">
+    <ul class="nav-links" id="nav-links">
+      <li *ngFor="let item of sideMenuBarList" #itemEl
+        [class]="this.router.url.includes(item.route)?'menuSelected':((item.menuID === this.currentSubMenuParentID)?'showMenu':'')">
+        <div *ngIf="!item.subMenu" class="dropdown-title">
+          <a (click)="onMenuclick(item.route)">
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{item.menuCode | translate}}</span>
+          </a>
+        </div>
+        <div *ngIf="item.subMenu && item.subMenu.length > 0" class="dropdown-title"
+          (click)="showSubmenu(item.menuID)">
+          <a>
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{item.menuCode | translate}}</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu" [class.blank]="item.subMenu && item.subMenu.length == 0">
+         <li *ngFor="let item_sub of item.subMenu"
+            [class]="(item_sub.route && this.router.url.includes(item_sub.route))?'menuSelected':''">
+            <a (click)="onMenuclick(item_sub.route, item_sub.menuCode)"><i class='bx bx-right-arrow-circle'></i>
+              {{item_sub.menuCode | translate}}</a>
+          </li> 
+          <li *ngFor="let item_sub of item.subMenu"
+          [class.menuSelected]="(item_sub.route && this.router.url === item_sub.route)">
+            <a (click)="onMenuclick(item_sub.route, item_sub.menuCode, item_sub.menuId)"><i class='bx bx-right-arrow-circle'></i>
+              {{item_sub.menuCode | translate}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            User Management
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Menu Creation</a></li>
+            <li><a class="dropdown-item" href="#">Role Creation</a></li>
+            
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+      
+    </div>
+  </div>
+</nav>

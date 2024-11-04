@@ -1,0 +1,35 @@
+<!-- <app-header [isMenu]="true"></app-header>  -->
+<main id="mainInner">
+    <app-page-heading [pageHeading]="pageHeading  | translate"></app-page-heading>
+    <div class="container-fluid mt-2">
+        <section class="content-section">
+            <div class="d-flex">
+                <div class="add new"> 
+                    <app-buttons [lable]="btnLabel | translate" [btnType]="'button'" [cssClass]="'btn-orange'"
+                                 [routerLink]="addRoutePath">
+                    </app-buttons>
+                </div>
+                <!-- <div class="ms-auto ">
+                    <app-export-pdf-excel (callbackExcel)="exportExcelData()" [isExport]="true"
+                                          (callbackPdf)="exportPDFData()"></app-export-pdf-excel>
+                </div>  -->
+            </div>
+
+<div class="row">
+    <div class="mt-2">
+        <div class="row">
+            <div class="mt-2">
+                <app-table [tableData]="componentList" [tableColumns]="tableColumns"
+                           [isFilterable]="true" [isPageable]="true"
+                           [rowActionIcon]="'action'"
+                           [recordCount]="componentList.length" 
+                           [requiredActions]="rowActionList"
+                           >
+                </app-table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+</div>

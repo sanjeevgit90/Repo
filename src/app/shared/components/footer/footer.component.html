@@ -1,0 +1,75 @@
+<!-- footer start  here -->
+<footer class="footer" *ngIf="isBottomFooter">
+
+  <div class="footer_mid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="footer_visitor">
+            <p>{{'GLOBAL_YOUR_VISITOR_NO'| translate}} : <span>4626936</span></p>
+            <p>{{'GLOBAL_REVIEWED_DATE'| translate}} : 14-10-2023</p>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer_social">
+            <h6>{{'GLOBAL_FOLLOW_US'| translate}}</h6>
+            <ul>
+              <li><a href="https://www.facebook.com/upagriculturedepartment"
+                target="_blank"><i class="facebook fab fa-facebook-f"></i></a></li>
+              <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fupagriculture"
+                target="_blank"><i class="twitter fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="linkedin fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCkRIu1yJOC0gtvUKNFsF4hWw" target="_blank"><i class="youtube fas fa-play"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_menu">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="footer_menulist">
+          <ul>
+            <!-- <li><a href="http://agriculture.up.gov.in/dbt/complaint.html"
+              target="_blank">{{'GLOBAL_SUGGESTION_COMPLAINTS'| translate}}</a></li> -->
+            <li><a routerLink="/list-complaint/add-edit-complaint">{{'Lodge Complaint'| translate}}</a></li>
+            <li><a routerLink="/list-complaint/search-complaint">{{'Search Complaint'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_ACCESSIBILITY_STATEMENT'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_PRIVACY_POLICY'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_HYPERLINK_POLICY'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_COPYRIGHTS'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_TERMS_CONDITIONS'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_DISCLAIMER'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_ARCHIVES'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_HELP'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_WEBSITE_POLICY'| translate}}</a></li>
+            <li><a href="">{{'GLOBAL_SITEMAP'| translate}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer_bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="footer_copyright">
+            <p>Copyright © Rajasthan Jan-Aadhaar Yojana, Government of Rajasthan, All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+ <div class="row" *ngIf="!isBottomFooter">
+        <div class="col-md-6 offset-md-3 text-center">
+          <p class="rounded bg-light p-2 mb-0">Copyright © Rajasthan Jan-Aadhaar Yojana, Government of Rajasthan, All rights reserved.</p>
+        </div>
+    
+      </div>
+<!-- ======= Footer ======= -->

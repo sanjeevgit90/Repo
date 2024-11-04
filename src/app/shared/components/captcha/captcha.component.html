@@ -1,0 +1,18 @@
+<div class="mb-3">
+  <div class="row">
+    <div class="col-5">
+      <div class="captcha-bg">
+        <canvas class="cpatcha-canvas" #myCanvas height="25" width="100"></canvas>
+      </div>
+    </div>
+    <div class="col-2 px-0">
+      <div class="login-referesh" (click)="captcha()">
+          <a class="refresh"><i class="bi bi-arrow-repeat"></i></a>
+      </div>
+    </div>
+    <div class="col-5" *ngIf="formGroup.controls.captcha">
+      <app-form-control [placeholder]="placeholderValue + ' captcha'" [isRequired]="true"
+      [inputType]="'input'" [maxlength]="5" [isLabel]="false" [control]="formGroup.controls.captcha"></app-form-control>
+    </div>
+  </div>
+</div>

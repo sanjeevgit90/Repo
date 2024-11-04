@@ -1,0 +1,12 @@
+.heading-img {background: url(../../../../assets/img/banner1.jpg);
+position: fixed; width: 100%; top: 0px; z-index: 1;}
+.role-select {
+    position: absolute; z-index: 2; text-align: right; right: 20px; top: -15px;
+}
+.layer-overlay.overlay-dark.brown-theme::before {
+   background-color:  #521e1b;
+}
+.breadcrumb-lighter{
+    padding:5px 5px !important;
+    margin-left:260px !important;
+}

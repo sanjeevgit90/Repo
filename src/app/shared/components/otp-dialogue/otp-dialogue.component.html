@@ -1,0 +1,51 @@
+
+<div>
+    <div class="row g-3 text-center align-items-center ">
+      <div class="col-md-10 offset-md-1 rounded p-4 bg_pink">
+        <form [formGroup]="formGroup">
+        <div class="row">
+      <!-- <div class="col-auto offset-md-2">
+        <label for="mobileno" class="col-form-label form-label">Enter Mobile No. </label>
+      </div> -->
+      <div class="col-md-6">
+        <div class="mb-3">
+            <app-form-control [inputId]="'mobile'" [lable]="'GLOBAL_MOBILE' | translate"
+            [control]="formGroup.controls.mobile" [placeholder]="placeholderValue + ' mobile no.'"
+            [inputType]="'numericInput'" [fieldType]="'mobileno'" [regxPattern]="mobilePattern"
+            [maxlength]="10"></app-form-control>
+        </div>
+      </div>
+      <div class="col-auto mt-4">
+        <button class="btn btn-success"
+        type="submit">
+        Generate OTP
+      </button>         
+     </div>
+      </div>
+    </form>
+    <div > 
+        <!-- *ngIf="showOtpField" -->
+      <p class="font-weight-bold">OTP has been successfully sent on your
+        Registered Email Id & Mobile no. {{timer}}</p>
+        <p class="font-weight-bold">Your OTP is valid for
+            <app-countdown-clock *ngIf="!showResend" [seconds]="timer" (timeComplete)="showResendButton()"></app-countdown-clock>
+        </p>
+        <div class="row mb-3">
+        <div class="col-auto offset-md-3 mt-4">
+          <label for="mobileno" class="col-form-label form-label">Enter OTP </label>
+        </div>
+        <div class="col-auto">
+          <app-form-control [inputId]="'otp'"
+            [control]="formGroup.controls.otp" [placeholder]="placeholderValue + ' otp'"
+            [inputType]="'numericInput'" [fieldType]="'mobileno'"
+            [maxlength]="4"></app-form-control>
+          <!-- <input type="text" formControlName="otp" id="mobileno" class="form-control"> -->
+        </div>
+        </div>
+        <p >In case OTP is not received then please <a *ngIf="showResend" (click)="sendOtp()" href="">click here</a> to resend the OTP</p>
+        <button class="btn btn-success">Verify & Update</button>
+    </div>
+        </div>
+    </div>
+  </div>
+
